@@ -13,3 +13,5 @@ $$\max \{ d(\ell_i, w), d(\ell_j, w) \} \leq t + \nu(w)$$
 Where $\nu(w)$ is the distance between $w$ and its nearest landmark point. Three landmarks are connected by 2-simplex if every pair has been connected.
 
 ## Genus 5 Surface
+Genus 5 surface looks like below:  
+<img width="190" alt="genus 5 surface" src="https://user-images.githubusercontent.com/120891991/208362844-7eaaea3f-4828-45a8-b5a6-2949aff2f860.png">
