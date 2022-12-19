@@ -1,4 +1,4 @@
-# Analyzing-the-Shape-of-Data--Persistent-Homology
+# Analyzing the 'Shape' of Data - Persistent Homology
 **Mentor:** Dr. Zhixu Su  
 **TA:** Chengyuan Ma  
 **Undergraduate students:** Caroline Ding, Zongze Li
@@ -9,5 +9,7 @@ In this project, we computed the persistent homology of genus 5 surface by apply
 
 ## What is the Lazy Witness Complex?
 Given a finite set of point $S$ in $\mathbb{R}^d$ with the landmark subset $L$. At each filtration value $t$, two landmarks $\ell_i$ and $\ell_j$ are connected by 1-simplex if there exists a witness point $w$ such that:
-$$\max \left{ d(\ell_i, w), d(\ell_j, w) \right} \leq t + \nu(w)$$
+$$\max \{ d(\ell_i, w), d(\ell_j, w) \} \leq t + \nu(w)$$
 Where $\nu(w)$ is the distance between $w$ and its nearest landmark point. Three landmarks are connected by 2-simplex if every pair has been connected.
+
+## Genus 5 Surface
