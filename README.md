@@ -19,8 +19,24 @@ The implicit surface equation of genus 5 surface is:
 $$3 + 8 (x^4 + y^4 + z^4) = 8 (x^2 + y^2 + z^2)$$
 
 ## Algorithms
-#### Step 1: Choosing landmarks
+#### Step 1: Get data set
+Generating a certain number of data points from the implicit surface equation.
+
+#### Step 2: Choosing landmarks
 If we have a huge data set, generating smaller number of simplices could speed up the construction of filtered simplicial complexes. Therefore, we can choose a subset of data points, called **landmarks**, that can still capture the shape of the original data set by applying the **Sequential MaxMin Method**.
 - Randomly select the first landmark among the data points.
 - Select the second landmark which is the farthest data point from the first landmark.
-- Select the third landmark which has the largest minimum distance of the first two landmarks.
+- Select the third landmark which has the largest minimum distance of the first two landmarks. etc.
+
+#### Step 3: Calculate $\nu(w)$
+Finding the closest landmark for each point in the data set.
+
+#### Step 4: Draw lazy witness complexes
+Forming 1-simplex and 2-simplex by connecting the points that satisfied the lazy witness complex criteria.
+
+## Libraries used
+- `math`
+- `numpy`
+- `plotly.graph_objects`
+- `random`
+- `time`
