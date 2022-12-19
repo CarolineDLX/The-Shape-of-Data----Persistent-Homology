@@ -8,3 +8,4 @@ This is a project from UW WXML Autumn 2022. We used techniques from topology to 
 In this project, we computed the persistent homology of genus 5 surface by applying the lazy witness complex.
 
 ## What is the Lazy Witness Complex?
+Given a finite set of point $S$ in $\mathbb{R}^d$,
