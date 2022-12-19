@@ -17,3 +17,10 @@ Genus 5 surface looks like below:
 <img width="190" alt="genus 5 surface" src="https://user-images.githubusercontent.com/120891991/208362844-7eaaea3f-4828-45a8-b5a6-2949aff2f860.png">  
 The implicit surface equation of genus 5 surface is:
 $$3 + 8 (x^4 + y^4 + z^4) = 8 (x^2 + y^2 + z^2)$$
+
+## Algorithms
+#### Step 1: Choosing landmarks
+If we have a huge data set, generating smaller number of simplices could speed up the construction of filtered simplicial complexes. Therefore, we can choose a subset of data points, called **landmarks**, that can still capture the shape of the original data set by applying the **Sequential MaxMin Method**.
+- Randomly select the first landmark among the data points.
+- Select the second landmark which is the farthest data point from the first landmark.
+- Select the third landmark which has the largest minimum distance of the first two landmarks.
