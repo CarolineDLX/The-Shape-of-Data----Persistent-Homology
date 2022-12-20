@@ -1,6 +1,8 @@
 """
 Caroline Ding
-Mentored by Chengyuan Ma
+
+Thanks to my TA Chengyuan Ma for helping me with this part.
+
 This is a file that includes the implementations for drawing
 the genus 5 surface by applying the lazy witness complex.
 """
