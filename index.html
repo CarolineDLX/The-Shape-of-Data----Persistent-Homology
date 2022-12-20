@@ -1,10 +1,9 @@
 <!doctype html>
-
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 <html>
+  
   <head>
     <title>Persistent Homology</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
 
   <body>
@@ -18,11 +17,11 @@
     
     <h2>The 'Shape' of a Data Set</h2>
     
-    <p style="width: 50%;">
+    <p style="width: 80%;">
       We used techniques from topology to understand the 'shape' of data set. Persistent homology detects topological
       features of the complexes that persist over a range of scales, it computes the numbers of connected components,
       1-dimensional holes (loops), 2-dimensional holes (voids), etc, and keeps track of the birth and death scale of
-      the features.
+      the features. <br>
       
       In this project, we plot the <strong>genus 5 surface</strong> by applying the <strong>lazy witness complex</strong>.
     </p>
@@ -39,7 +38,7 @@
       This is the 3D genus 5 surface graph. It has has 1 0-dimensional hole, 10 1-dimensional holes, 1 2-dimensional hole.
     </p>
     
-    <center><iframe src="./plot/genus_5_surface.html" height="1000" width="1000"></iframe>
+    <center><iframe src="./plot/genus_5_surface.html" height="900" width="900"></iframe>
 
   </body>
 </html>
