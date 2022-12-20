@@ -47,6 +47,6 @@ Forming 1-simplex and 2-simplex by connecting the points that satisfied the lazy
 ## Project Structure
 - `code`: Contains the Python code we wrote to draw the genus 5 surface.
 - `plot`: Stores the html page for the interactive plot.
-- `slide`: The PowerPoint we used in our presntation.
+- `slide`: The PowerPoint we used in our presntation. Created by Dr. Su.
 - `README.md`: You are here.
 - `index.html`: The output of the Python code (3D genus 5 surface).
