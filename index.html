@@ -1,13 +1,24 @@
 <!doctype html>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <html>
   <head>
     <title>Persistent Homology</title>
   </head>
 
   <body>
-    <h1>The 'Shape' of a Data Set</h1>
-    
+    <h1>Analyzing the 'Shape' of Data - Persistent Homology</h1>
     <p>
+      <strong>Mentor:</strong> Dr. Zhixu Su <br>
+      <strong>TA:</strong> Chengyuan Ma <br>
+      <strong>Undergraduate students:</strong> Caroline Ding, Zongze Li <br>
+      <strong>Edited by:</strong> Caroline Ding
+      </p>
+    
+    <h2>The 'Shape' of a Data Set</h2>
+    
+    <p style="width: 50%;">
       We used techniques from topology to understand the 'shape' of data set. Persistent homology detects topological
       features of the complexes that persist over a range of scales, it computes the numbers of connected components,
       1-dimensional holes (loops), 2-dimensional holes (voids), etc, and keeps track of the birth and death scale of
@@ -16,13 +27,13 @@
       In this project, we plot the <strong>genus 5 surface</strong> by applying the <strong>lazy witness complex</strong>.
     </p>
     
-    <h2>Lazy Witness Complex</h2>
+    <h3>Lazy Witness Complex</h3>
     
     <p>
       Given a finite set of point $S$ in $\mathbb{R}^d$ with the landmark subset $L$.
     </p>
     
-    <h3>Result of the Lazy Witness Complex</h3>
+    <h4>Result of the Lazy Witness Complex</h4>
     
     <p>
       This is the 3D genus 5 surface graph. It has has 1 0-dimensional hole, 10 1-dimensional holes, 1 2-dimensional hole.
