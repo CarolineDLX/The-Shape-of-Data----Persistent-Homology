@@ -1,12 +1,16 @@
 <!doctype html>
+
 <html>
   
   <head>
+    <meta charset="utf-8">
     <title>Persistent Homology</title>
-    <script type="text/javascript" scr="http://cdn.mathjax.org/mathjax/latest/MathJax.js?condig=Tex-AMS_MML_HTMLorMML"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
-
+  
+  
   <body>
+    
     <h1>Analyzing the 'Shape' of Data - Persistent Homology</h1>
     <p>
       <strong>Mentor:</strong> Dr. Zhixu Su <br>
@@ -15,13 +19,84 @@
       <strong>Edited by:</strong> Caroline Ding
       </p>
     
-    <h2>Genus 5 Surface</h2>
+    <div id="links">
+      <a class="repo-link"
+         href="https://github.com/CarolineDLX/Presistent-Homology"
+         rel="noopener noreferrer"
+         target="_blank">
+        <span class="repo-text">View project repo</span>
+      </a>
+    </div>
+    
+    <h2>Introduction</h2>
+    <p>
+      Topological data analysis uses techniques from topology to understand the ‘shape’ of
+      data set, which can be high dimensional and noisy. Given a point cloud data set, one
+      can construct a nested sequence of complexes thickening the data set at different scales.
+      Persistent homology detects topological features of the complexes that persist over a
+      range of scales, it computes the numbers of connected components, 1-dimensional holes (loops),
+      2-dimensional holes (voids), etc, and keeps track of the birth and death scale of the features.
+    </p>
+    <p>
+      In this project, we applied the <strong>Lazy Witness Complex</strong> to compute the persistent homology
+      of synthetic data.
+    </p>
+    
+    <h2>Lazy Witness Complex</h2>
+    <p>
+      Given a finite set of point \(S\) in \(\mathbb{R}^d\) with the landmark subset \(L\). <br>
+      At each filtration value \(t\), two landmarks \(\ell_i\) and \(\ell_j\) are connected by 1-simplex
+      if there exists a witness point \(w\) such that:
+      $$\max \{ d(\ell_i, w), d(\ell_j, w) \} \leq t + \nu(w)$$
+      Where \(\nu(w)\) is the distance between \(w\) and its nearest landmark point. Three landmarks are connected
+      by 2-simplex if every pair has been connected.
+    </p>
+    
+    <h2>Algorithms</h2>
+    <h3>Step 1: Get the data set</h3>
+    Generating a certain number of data points from the implicit surface equation.
+    
+    <h3>Step 2: Choosing landmarks</h3>
+    <p>
+      If we have a huge data set, generating smaller number of simplices could speed up the construction
+      of filtered simplicial complexes. Therefore, we can choose a subset of data points, called land-marks,
+      that can still capture the shape of the original data set by applying the <strong>Sequential MaxMin Method</strong>.
+    </p>
+    
+    <h4>Sequential MaxMin</h4>
+    <ul>
+      <li>Randomly select the first landmark among the data points.</li>
+      <li>Select the second landmark which is the farthest data point from the first landmark.</li>
+      <li>Select the third landmark which has the largest minimum distance of the first two landmarks.etc.</li>
+    </ul>
+    
+    <p>
+      Here is an output using a simple data set:
+    </p>
+    
+    <img src="./Plot/landmarks.png" height="200" width="200">
+    
+    <p>
+      This figure shows the sequence of selecting the landmarks, starting from the red point.
+    </p>
+    
+    <h3>Step 3: Calculate \(\nu(w)\)</h3>
+    <p>
+      Finding the closest landmark for each point in the data set.
+    </p>
+    
+    <h3>Step 4: Draw lazy witness complexes</h3>
+    <p>
+      Forming 1-simplex and 2-simplex by connecting the points that satisfied the lazy witness complex criteria.
+    </p>
+    
+    <h2>Output: Genus 5 Surface</h2>
     <ul>
       <li>We used Python to draw the genus 5 surface by applying the lazy witness complex.</li>
       <li>Below is the result of running the Python code.</li>
     </ul>
     
-    <center><iframe src="./plot/genus_5_surface.html" height="900" width="900"></iframe>
-
+    <center><iframe src="./Plot/genus_5_surface.html" height="900" width="900"></iframe></center>
+    
   </body>
 </html>
