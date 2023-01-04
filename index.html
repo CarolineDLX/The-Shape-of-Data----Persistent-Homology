@@ -17,7 +17,11 @@
       <strong>TA:</strong> Chengyuan Ma <br>
       <strong>Undergraduate students:</strong> Caroline Ding, Zongze Li <br>
       <strong>Edited by:</strong> Caroline Ding
-      </p>
+    </p>
+    
+    <p>
+      You can find my GitHub page here:
+    </p>
     
     <div id="links">
       <a class="repo-link"
@@ -37,9 +41,12 @@
       range of scales, it computes the numbers of connected components, 1-dimensional holes (loops),
       2-dimensional holes (voids), etc, and keeps track of the birth and death scale of the features.
     </p>
+    
     <p>
-      In this project, we applied the <strong>Lazy Witness Complex</strong> to compute the persistent homology
-      of synthetic data.
+      In this project, we learned various methods of building filtered simplicial complexes and understand
+      the standard algorithm for computing persistent homology. In the end of the project, we applied
+      one of the methods of buildinng filtered simplicial complexes -- <strong>Lazy Witness Complex</strong>
+      to visiualize the shape of genus 5 surface equation in Python.
     </p>
     
     <h2>Lazy Witness Complex</h2>
@@ -48,13 +55,18 @@
       At each filtration value \(t\), two landmarks \(\ell_i\) and \(\ell_j\) are connected by 1-simplex
       if there exists a witness point \(w\) such that:
       $$\max \{ d(\ell_i, w), d(\ell_j, w) \} \leq t + \nu(w)$$
-      Where \(\nu(w)\) is the distance between \(w\) and its nearest landmark point. Three landmarks are connected
+      Where \(\nu(w)\) is the \(\nu\)th distance between \(w\) and its nearest landmark point (\(\nu = 0, 1, 2\)). Three landmarks are connected
       by 2-simplex if every pair has been connected.
     </p>
     
     <h2>Algorithms</h2>
     <h3>Step 1: Get the data set</h3>
-    Generating a certain number of data points from the implicit surface equation.
+    <p>
+      Generating a certain number of data points from the genus 5 surface equation.
+    </p>
+      
+     <h4> Genus 5 surface equation </h4>
+     \( 3 + 8(x^4 + y^4 + z^4) = 8(x^2 + y^2 + z^2) \)
     
     <h3>Step 2: Choosing landmarks</h3>
     <p>
@@ -63,7 +75,7 @@
       that can still capture the shape of the original data set by applying the <strong>Sequential MaxMin Method</strong>.
     </p>
     
-    <h4>Sequential MaxMin</h4>
+    <h4>Sequential MaxMin Method</h4>
     <ul>
       <li>Randomly select the first landmark among the data points.</li>
       <li>Select the second landmark which is the farthest data point from the first landmark.</li>
@@ -71,7 +83,7 @@
     </ul>
     
     <p>
-      Here is an output using a simple data set:
+      Here is an output of four selected landmarks from 9 data points using Sequential MaxMin Method:
     </p>
     
     <img src="./Plot/landmarks.png" height="200" width="200">
@@ -82,18 +94,20 @@
     
     <h3>Step 3: Calculate \(\nu(w)\)</h3>
     <p>
-      Finding the closest landmark for each point in the data set.
+      Finding the \(\nu\)th distance of the closest landmark for each point in the data set.
     </p>
     
     <h3>Step 4: Draw lazy witness complexes</h3>
     <p>
-      Forming 1-simplex and 2-simplex by connecting the points that satisfied the lazy witness complex criteria.
+      Forming 1-simplex and 2-simplex by connecting the points and edges that satisfied the lazy witness complex criteria.
     </p>
     
     <h2>Output: Genus 5 Surface</h2>
     <ul>
       <li>We used Python to draw the genus 5 surface by applying the lazy witness complex.</li>
       <li>Below is the result of running the Python code.</li>
+      <li>This graph shows that using the Lazy Witness Complex to analyze the 'shape' of the genus 5 surface equation
+        could give us the genus 5 surface successfully.
     </ul>
     
     <center><iframe src="./Plot/genus_5_surface.html" height="900" width="900"></iframe></center>
