@@ -29,6 +29,6 @@ The output from our code will have a similar shape as the one above.
 ## Project Structure
 - `code`: Contains the Python code we wrote to find the landmarks using Sequential MaxMin and draw the genus 5 surface.
 - `plot`: Stores the html page for the interactive plot and the landmarks graph.
-- `slide`: The PowerPoint we used in our presntation which contains more detailed information and elegant graphs. Created by Dr. Su.
+- `slide`: The PowerPoint we used in our presntation which contains more detailed information and elegant graphs.
 - `README.md`: You are here.
 - `index.html`: Detailed information on analyzing the 'shape' of genus 5 surface equation using Lazy Witness Complex.
