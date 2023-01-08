@@ -13,7 +13,7 @@ In this project, we learned various methods of building filtered simplicial comp
 ## Genus 5 Surface
 Genus 5 surface should look like:  
 <img width="190" alt="genus 5 surface" src="https://user-images.githubusercontent.com/120891991/208362844-7eaaea3f-4828-45a8-b5a6-2949aff2f860.png">  
-The implicit surface equation of genus 5 surface is:
+The implicit surface equation of a genus 5 surface is:
 $$3 + 8 (x^4 + y^4 + z^4) = 8 (x^2 + y^2 + z^2)$$
 You can find more information [here](https://mathworld.wolfram.com/ChmutovSurface.html).
 
@@ -31,6 +31,5 @@ The output from our code will have a similar shape as the one above.
 ## Project Structure
 - `code`: Contains the Python code we wrote to find the landmarks using Sequential MaxMin and draw the genus 5 surface.
 - `plot`: Stores the html page for the interactive plot and the landmarks graph.
-- `slide`: The PowerPoint we used in our presntation which contains more detailed information and elegant graphs.
 - `README.md`: You are here.
 - `index.html`: Detailed information on analyzing the 'shape' of genus 5 surface equation using Lazy Witness Complex.
