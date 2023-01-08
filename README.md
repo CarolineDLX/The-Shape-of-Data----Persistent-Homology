@@ -3,7 +3,7 @@
 **TA:** Chengyuan Ma  
 **Undergraduate students:** Caroline Ding, Zongze Li
 
-This script was developed as part of an undergraduate project (WXML - Washington eExperimental Mathematics Lab) at University of Washington in Autumn 2022. The project entitled “Analyzing the 'Shape' of Data - Persistent Homology” was mentored by Dr. Zhixu Su and PhD candidate Chengyuan Ma.
+This script was developed as part of an undergraduate project (WXML - Washington eXperimental Mathematics Lab) at University of Washington in Autumn 2022. The project entitled “Analyzing the 'Shape' of Data - Persistent Homology” was mentored by Dr. Zhixu Su and PhD candidate Chengyuan Ma.
 
 Topological data analysis uses techniques from topology to understand the ‘shape’ of data set, which can be high dimensional and noisy. Given a point cloud data set, one can construct a nested sequence of complexes thickening the data set at different scales. Persistent homology detects topological features of the complexes that persist over a range of scales, it computes the numbers of connected components, 1-dimensional holes (loops), 2-dimensional holes (voids), etc, and keeps track of the birth and death scale of the features.
 
