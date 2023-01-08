@@ -11,7 +11,7 @@
   
   <body>
     
-    <h1>Analyzing the 'Shape' of Data - Persistent Homology</h1>
+    <h1>Construction and Visualization of Filtered Simplicial Complexes (Lazy Witness Complex) of 3D Point Cloud Data.</h1>
     <p>
       <strong>Mentor:</strong> Dr. Zhixu Su <br>
       <strong>TA:</strong> Chengyuan Ma <br>
@@ -34,6 +34,12 @@
     
     <h2>Introduction</h2>
     <p>
+      This script was developed as part of an undergraduate project (WXML - Washington eExperimental
+      Mathematics Lab) at University of Washington in Autumn 2022. The project entitled “Analyzing the
+      'Shape' of Data - Persistent Homology” was mentored by Dr. Zhixu Su and PhD candidate Chengyuan Ma.
+    </p>
+    
+    <p>
       Topological data analysis uses techniques from topology to understand the ‘shape’ of
       data set, which can be high dimensional and noisy. Given a point cloud data set, one
       can construct a nested sequence of complexes thickening the data set at different scales.
@@ -44,9 +50,9 @@
     
     <p>
       In this project, we learned various methods of building filtered simplicial complexes and understood
-      the standard algorithm for computing persistent homology. At the end of the project, we applied one
-      of the methods of building filtered simplicial complexes - <strong>Lazy Witness Complex</strong>
-      to visualize the shape of genus 5 surface equation in Python.
+      the standard algorithm for computing persistent homology. We wrote Python code to construct and plot
+      Lazy Witness Complexes generated from a 3D point cloud data. In particular, we experimented with 3D data
+      points synthesized from the implicit equation of a genus 5 surface.
     </p>
     
     <h2>Lazy Witness Complex</h2>
@@ -62,7 +68,7 @@
     <h2>Algorithms</h2>
     <h3>Step 1: Get the data set</h3>
     <p>
-      Generating a certain number of data points from the genus 5 surface equation.
+      Generating a certain number of data points from a genus 5 surface equation.
     </p>
       
      <h4> Genus 5 surface equation </h4>
